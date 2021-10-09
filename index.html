@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+
+  <meta name="theme-color" content="#212121">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>3Store</title>
+  
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="icon" href="assets/icons/favicon.png">
+  <link rel="manifest" href="/manifest.json">
+  
+  <link rel="stylesheet" href="framework7/framework7-bundle.min.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app" class="theme-dark">
+    
+    <!-- Views/Tabs container -->
+    <div class="views tabs safe-areas">
+      <!-- Tabbar for switching views-tabs -->
+      <div class="toolbar toolbar-bottom tabbar-labels">
+        <div class="toolbar-inner">
+          <a href="#view-home" class="tab-link tab-link-active">
+            <i class="icon f7-icons if-not-md">house_fill</i>
+            <i class="icon material-icons if-md">home</i>
+            <span class="tabbar-label">Home</span>
+          </a>
+          <a href="#view-Signed" class="tab-link">
+            <i class="icon f7-icons if-not-md">square_list_fill</i>
+            <i class="icon material-icons if-md">view_list</i>
+            <span class="tabbar-label">Apps</span>
+          </a>
+        </div>
+      </div>
+
+           <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-home" class="view view-main view-init tab tab-active">
+        <div class="page" data-name="home">
+          <!-- Top Navbar -->
+          <div class="navbar navbar-large">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="left">
+                </a>
+              </div>
+              <div class="title sliding">3Store</div>
+              <div class="right">
+                </a>
+              </div>
+              <div class="title-large">
+                <div class="title-large-text">3Store</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="block block-strong">
+               <p>Welcome to  the new 3Store! 3Store is a place where you can get all of your favorite apps!</p>
+
+               <h1>Status</h1>
+               <p>All the apps are signed and updated to the latest version! If you have any ideas for apps <a href="https://twitter.com/Use3Store">DM us</a> or <a href="mailto:info@3store.ga">email us</a>.
+              <p>If the FFapple certs have revoked on your device or you have been blacklisted, follow this tutorial to get your apps working again
+
+              1.  Create an icloud backup of your device in settings.
+              2.  Erase all contents and settings from your device by going to settings > general > reset > erase all content and settings 
+              3.  Enable FFapple. </p>
+            
+
+
+              <p>How to set up FFapple, 1.  Download DNScloak from the AppStore and the links needed to enable FFapple (sideloadstore.ga/FFapple.zip). 2.  Open DNScloak and choose the "adguard-dns" server.  3. Enable blacklist by going to the setting icon in the top right and scrolling down to blacklist (make sure connect on demand is turned ON).  Turn on blacklist and pick either the antirevoke or install apps file depending on your use.<p>
+            </div>
+
+            <div class="block-title">Links</div>
+            <div class="block block-strong">
+              <div class="row">
+                <div class="col-50">
+                  <a href="https://twitter.com/Use3Store" class="button button-raised button-fill panel-open" data-panel="left">Our Twitter</a>
+                </div>
+                <div class="col-50">
+                  <a href="mailto:info@3store.ga" class="button button-raised button-fill panel-open" data-panel="right">Email Us</a>
+                </div>
+              </div>
+            </div>
+            <div class="list links-list">
+              <ul>
+                <li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog View -->
+      <div id="view-Signed" class="view view-init tab" data-name="Signed" data-url="/Signed/">
+        <!-- Catalog page will be loaded here dynamically from /catalog/ route -->
+          <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar navbar-large">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+            <div class="title-large">
+              <div class="title-large-text">Signed Apps</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="searchbar-backdrop"></div>
+          <form class="searchbar searchbar-init" data-search-container=".app-list" data-search-in=".item-title">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Search" />
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Cancel</span>
+            </div>
+          </form>
+
+       
+        <div class="list media-list app-list">
+          <ul>
+            <li>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Taurine-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/taurine.jpeg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Taurine</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/unc0ver-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/unc0ver.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Unc0ver</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/chimrea-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/chimera.jpg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Chimera</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Electra-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/electra.jpg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Electra</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Youtube-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/youtube.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Cercube</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Instagram-signed.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/instagram.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Instagram Plus</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/OdysseyFF-signed.json'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/odyssey.jpg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Odyssey</div>
+                   <div class="item-after"><span class="badge color-green">Signed</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>
+              </div>
+              </div>
+              </div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Settings View -->
+      <div id="view-FFapple" class="view view-init tab" data-name="FFapple" data-url="/FFapple/">
+        <!-- Settings page will be loaded here dynamically from /settings/ route -->
+          <div class="page" data-name="home">
+        <!-- Top Navbar -->
+        <div class="navbar navbar-large">
+          <div class="navbar-bg"></div>
+          <div class="navbar-inner">
+   
+            <div class="title-large">
+              <div class="title-large-text">FFapple Apps</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scrollable page content-->
+        <div class="page-content">
+          <div class="searchbar-backdrop"></div>
+          <form class="searchbar searchbar-init" data-search-container=".app-list" data-search-in=".item-title">
+            <div class="searchbar-inner">
+              <div class="searchbar-input-wrap">
+                <input type="search" placeholder="Search" />
+                <i class="searchbar-icon"></i>
+                <span class="input-clear-button"></span>
+              </div>
+              <span class="searchbar-disable-button">Cancel</span>
+            </div>
+          </form>
+
+       
+        <div class="list media-list app-list">
+          <ul>
+            <li>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/youtubereborn.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/youtube.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Youtube-Reborn</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>     
+             <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/lz.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/lazarus.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Lazarus</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Anti-revoke</div>
+                  <div class="item-text"></div>
+                </div>         
+            <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/esign.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/esign.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">ESign</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">IPA Installer</div>
+                  <div class="item-text"></div>
+                </div>             
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/gbox.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/gbox.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">GBox</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">IPA Installer</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/messanger.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/messanger.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Messanger Shark</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Delta.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/Delta.PNG" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Delta</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Emulators</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/ReKarios.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/Rekarios.JPG" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">ReKarios</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Games</div>
+                  <div class="item-text"></div>
+                </div>        
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Dolphin.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/dolphin.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Dolphin</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Emulators</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/INDS.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/inds.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">INDS</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Emulators</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/ITransmission.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/itransmission.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">ITransmission</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>        
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Minecraft_lite.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/minecraft.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Minecraft Lite</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Games</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/NDS4IOS.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/inds.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">NDS</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Emulators</div>
+                  <div class="item-text"></div>
+                </div>    
+
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/RootlessJB4.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/rootless.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">RootlessJB4</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreak</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/UTM.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/utm.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">UTM</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Emulators</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Byte++.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/byte.jpeg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">byte++</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Doubleh3lix.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/doubleh3lix.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">DoubleH3lix</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/H3lix.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/h3lix.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">H3lix</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+        <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Phonex.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/phonex.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Phonex</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>    
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Electra.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/electra.jpg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Electra</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>      
+          <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Chimera.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/chimera.jpeg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Chimera</div>
+                   <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>      
+            <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Odyssey.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/odyssey.jpg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Odyssey</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>      
+            <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Taurine.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/taurine.jpeg" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Taurine</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text">1.1.0</div>
+                </div>                      
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Unc0ver.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/unc0ver.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Unc0ver</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Jailbreaks</div>
+                  <div class="item-text"></div>
+                </div>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Youtube.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/youtube.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Cercube</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https:sideloadstore.ga/jsons/Twitter-owl.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/twitter.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Twitter++</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Instagram++.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/instagram.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Instagram Rhino</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text"></div>
+                </div>
+              <li>
+              <div onclick="location='itms-services://?action=download-manifest&url=https://sideloadstore.ga/jsons/Facebook.plist'" class="item-content">
+                <div class="item-media">
+                  <img style="width: 60px; height: 60px; border-radius: 30%;" src="img/facebook.png" />
+                </div>
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Facebook Wolf</div>
+                  <div class="item-after"><span class="badge color-yellow">FFapple</span></div>
+                  </div>
+                  <div class="item-subtitle">Tweaked Apps</div>
+                  <div class="item-text">p</div>
+                </div>
+               <li>
+                </div>
+              </div>
+              </div>
+              </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Popup -->
+    <div class="popup" id="my-popup">
+      <div class="view">
+        <div class="page">
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Popup</div>
+              <div class="right">
+                <a href="#" class="link popup-close">Close</a>
+              </div>
+            </div>
+          </div>
+          <div class="page-content">
+            <div class="block">
+              <p>Popup content goes here.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div class="login-screen" id="my-login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Login</div>
+            <div class="list">
+              <ul>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Username</div>
+                    <div class="item-input-wrap">
+                      
+                      <input type="text" name="username" placeholder="Your username"/>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content item-input">
+                  <div class="item-inner">
+                    <div class="item-title item-label">Password</div>
+                    <div class="item-input-wrap">
+                      
+                      <input type="password" name="password" placeholder="Your password"/>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <ul>
+                <li>
+                  
+                  <a href="#" class="item-link list-button login-button">Sign In</a>
+                </li>
+              </ul>
+              <div class="block-footer">Some text about login information.<br/>Click "Sign In" to close Login Screen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Framework7 library -->
+  <script src="framework7/framework7-bundle.min.js"></script>
+  
+  
+  <!-- App routes -->
+  <script src="js/routes.js"></script>
+  <!-- App store -->
+  <script src="js/store.js"></script>
+  <!-- App scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
